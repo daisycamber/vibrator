@@ -28,7 +28,7 @@ BLEUart bleuart;
 // Central uart client
 BLEClientUart clientUart;
 
-#define PAIRING_PIN     "162024"
+#define PAIRING_PIN     "000000"
 
 #define LED_PIN 3
 
