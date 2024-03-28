@@ -47,6 +47,7 @@
           sendCharacteristic.oncharacteristicvaluechanged = function(value) {
             console.log("Value " + value)
           };
+          await sendCharacteristic.startNotifications();
           interval = setInterval(writeValues, 200);
         };
         document.getElementById("disconnect").onclick = function() {
