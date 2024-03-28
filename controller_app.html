@@ -44,6 +44,7 @@
           const service = await server.getPrimaryService(primaryServiceUuid);
           receiveCharacteristic = await service.getCharacteristic(receiveCharUuid);
           sendCharacteristic = await service.getCharacteristic(sendCharUuid);
+          await sendCharacteristic.startNotifications();
           sendCharacteristic.oncharacteristicvaluechanged = function(value) {
             console.log("Value " + value)
           };
